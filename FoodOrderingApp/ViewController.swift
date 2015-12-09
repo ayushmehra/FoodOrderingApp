@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func btnFacebookLogin(sender: AnyObject) {
+         FB.login(self.handleLogin);
+    }
+    func handleLogin(){
+        println("SUCCESS");
+        FB.getInfo();
+    }
 
 }
 

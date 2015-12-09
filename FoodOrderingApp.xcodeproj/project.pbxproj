@@ -14,6 +14,9 @@
 		2A4F20B01C180537005FFD3E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4F20AF1C180537005FFD3E /* Images.xcassets */; };
 		2A4F20B31C180537005FFD3E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4F20B11C180537005FFD3E /* LaunchScreen.xib */; };
 		2A4F20BF1C180537005FFD3E /* FoodOrderingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F20BE1C180537005FFD3E /* FoodOrderingAppTests.swift */; };
+		2A4F20D81C180C7A005FFD3E /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F20D71C180C7A005FFD3E /* Facebook.swift */; };
+		2A4F20DB1C180CC0005FFD3E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4F20D91C180CC0005FFD3E /* Bolts.framework */; };
+		2A4F20DC1C180CC0005FFD3E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4F20DA1C180CC0005FFD3E /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,10 @@
 		2A4F20B81C180537005FFD3E /* FoodOrderingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodOrderingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4F20BD1C180537005FFD3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A4F20BE1C180537005FFD3E /* FoodOrderingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOrderingAppTests.swift; sourceTree = "<group>"; };
+		2A4F20D71C180C7A005FFD3E /* Facebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
+		2A4F20D91C180CC0005FFD3E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Downloads/facebook-ios-swift-master/FBApp/Bolts.framework"; sourceTree = "<group>"; };
+		2A4F20DA1C180CC0005FFD3E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../../Downloads/facebook-ios-swift-master/FBApp/FacebookSDK.framework"; sourceTree = "<group>"; };
+		2A4F20DD1C180D04005FFD3E /* Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A4F20DB1C180CC0005FFD3E /* Bolts.framework in Frameworks */,
+				2A4F20DC1C180CC0005FFD3E /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +93,11 @@
 				2A4F20AC1C180537005FFD3E /* Main.storyboard */,
 				2A4F20AF1C180537005FFD3E /* Images.xcassets */,
 				2A4F20B11C180537005FFD3E /* LaunchScreen.xib */,
+				2A4F20D61C180C4F005FFD3E /* Utilities */,
+				2A4F20DF1C180DF1005FFD3E /* Frameworks */,
 				2A4F20A71C180536005FFD3E /* FoodOrderingApp.xcdatamodeld */,
 				2A4F20A31C180536005FFD3E /* Supporting Files */,
+				2A4F20DD1C180D04005FFD3E /* Bridging.h */,
 			);
 			path = FoodOrderingApp;
 			sourceTree = "<group>";
@@ -113,6 +125,31 @@
 				2A4F20BD1C180537005FFD3E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A4F20D61C180C4F005FFD3E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2A4F20DE1C180DD8005FFD3E /* Facebook */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		2A4F20DE1C180DD8005FFD3E /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				2A4F20D71C180C7A005FFD3E /* Facebook.swift */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		2A4F20DF1C180DF1005FFD3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A4F20D91C180CC0005FFD3E /* Bolts.framework */,
+				2A4F20DA1C180CC0005FFD3E /* FacebookSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +255,7 @@
 				2A4F20AB1C180536005FFD3E /* ViewController.swift in Sources */,
 				2A4F20A61C180536005FFD3E /* AppDelegate.swift in Sources */,
 				2A4F20A91C180536005FFD3E /* FoodOrderingApp.xcdatamodeld in Sources */,
+				2A4F20D81C180C7A005FFD3E /* Facebook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +314,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thierry Madvig (22HA2DHLJ4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thierry Madvig (22HA2DHLJ4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -298,6 +337,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "b2853780-d159-4bf6-8ae7-ade950a2be05";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,7 +361,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thierry Madvig (22HA2DHLJ4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thierry Madvig (22HA2DHLJ4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -336,6 +377,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "b2853780-d159-4bf6-8ae7-ade950a2be05";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -346,9 +388,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thierry Madvig (22HA2DHLJ4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thierry Madvig (22HA2DHLJ4)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ayush/Downloads/facebook-ios-swift-master/FBApp",
+				);
 				INFOPLIST_FILE = FoodOrderingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b2853780-d159-4bf6-8ae7-ade950a2be05";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/ayush/Desktop/FoodOrderingApp/FoodOrderingApp/Bridging.h;
 			};
 			name = Debug;
 		};
@@ -356,9 +406,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thierry Madvig (22HA2DHLJ4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thierry Madvig (22HA2DHLJ4)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ayush/Downloads/facebook-ios-swift-master/FBApp",
+				);
 				INFOPLIST_FILE = FoodOrderingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b2853780-d159-4bf6-8ae7-ade950a2be05";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/ayush/Desktop/FoodOrderingApp/FoodOrderingApp/Bridging.h;
 			};
 			name = Release;
 		};
